@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Kuis</title>
+
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Font & Style -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(120deg, #e6f0ff, #ffffff);
+        min-height: 100vh;
+      }
+
+      .navbar {
+        background-color: #002b80;
+      }
+
+      .avatar-img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+
+      .card-kuis {
+        transition: transform 0.3s;
+      }
+
+      .card-kuis:hover {
+        transform: scale(1.03);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark px-4 shadow">
+      <a class="navbar-brand text-white" href="#"><i class="bi bi-mortarboard-fill"></i> Kuis Akademik</a>
+      <div class="ms-auto dropdown">
+        <button class="btn btn-outline-light dropdown-toggle p-0 border-0 bg-transparent" type="button" data-bs-toggle="dropdown">
+          <img id="avatarThumb" src="img/default.png" class="avatar-img" alt="Avatar" />
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow">
+          <li class="px-3 py-2 text-center">
+            <img id="avatarThumbDropdown" src="img/default.png" class="rounded-circle mb-2" width="60" height="60" />
+            <div><strong id="userNameDropdown">Mahasiswa</strong></div>
+            <div>
+              <span class="badge bg-info text-dark mt-1">Skor: <span id="userScore">0</span></span>
+            </div>
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li>
+            <a class="dropdown-item text-success fw-semibold" href="quis.html"><i class="bi bi-play-circle-fill me-1"></i> Mulai Kuis</a>
+          </li>
+          <li>
+            <a class="dropdown-item text-warning fw-semibold" href="leaderboard.html"><i class="bi bi-trophy-fill me-1"></i> Leaderboard</a>
+          </li>
+          <li>
+            <a class="dropdown-item text-danger fw-semibold" href="index.html" onclick="logout()"><i class="bi bi-box-arrow-right me-1"></i> Keluar</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Konten Dashboard -->
+    <div class="container my-5">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold">Halo, <span id="userName">Mahasiswa</span>! 🎓</h2>
+        <p class="text-muted">
+          Skor terakhir kamu: <strong><span id="scoreDisplay">0</span></strong>
+        </p>
+        <p>Ayo tantang dirimu dengan kuis baru atau lihat peringkat temanmu!</p>
+      </div>
+
+      <div class="row justify-content-center g-3">
+        <div class="col-md-6">
+          <div class="card card-kuis shadow">
+            <div class="card-body text-center">
+              <h5 class="card-title">🧠 Tantangan Kuis IMK(interaksi manusia dan komputer)</h5>
+              <p class="card-text">20 soal pilihan ganda, waktu terbatas.</p>
+              <button class="btn btn-primary" onclick="startQuiz()"><i class="bi bi-play-circle"></i> Mulai Kuis</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card card-kuis shadow">
+            <div class="card-body text-center">
+              <h5 class="card-title">🏆 Peringkat Tertinggi</h5>
+              <p class="card-text">Lihat skor teman-temanmu di leaderboard.</p>
+              <a href="leaderboard.html" class="btn btn-warning text-dark"><i class="bi bi-trophy"></i> Lihat Leaderboard</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const name = localStorage.getItem("userName") || "Mahasiswa";
+        const avatar = localStorage.getItem("userAvatar") || "img/default.png";
+        const score = localStorage.getItem("userScore") || "0";
+
+        document.getElementById("userNameDropdown").textContent = name;
+        document.getElementById("avatarThumb").src = avatar;
+        document.getElementById("avatarThumbDropdown").src = avatar;
+        document.getElementById("userScore").textContent = score;
+
+        // Tambahan: Tampilkan di konten utama
+        document.getElementById("userName").textContent = name;
+        document.getElementById("scoreDisplay").textContent = score;
+      });
+
+      function startQuiz() {
+        window.location.href = "quis.html";
+      }
+    </script>
+    <script type="module">
+      import { logout } from "./js/logout.js";
+      window.logout = logout; // agar bisa dipanggil dari onclick
+    </script>
+  </body>
+</html>

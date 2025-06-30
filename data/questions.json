@@ -1,0 +1,249 @@
+[
+  {
+    "id": 1,
+    "question": "Apa tujuan utama dari Interaksi Manusia dan Komputer (IMK)?",
+    "options": {
+      "a": "Membuat komputer lebih cepat",
+      "b": "Meningkatkan keamanan komputer",
+      "c": "Meningkatkan efisiensi dan kenyamanan pengguna",
+      "d": "Mengurangi konsumsi daya komputer"
+    },
+    "answer": "c",
+    "explanation": "Tujuan utama IMK adalah menciptakan sistem yang efisien, efektif, dan menyenangkan bagi pengguna."
+  },
+  {
+    "id": 2,
+    "question": "Manakah contoh perangkat input tradisional?",
+    "options": {
+      "a": "Monitor CRT",
+      "b": "Mouse bola",
+      "c": "Printer dot-matrix",
+      "d": "LCD Touchscreen"
+    },
+    "answer": "b",
+    "explanation": "Mouse bola adalah perangkat input tradisional, berbeda dengan monitor atau printer yang merupakan output."
+  },
+  {
+    "id": 3,
+    "question": "Berikut ini adalah contoh perangkat output **zaman dulu**, kecuali:",
+    "options": {
+      "a": "Printer dot-matrix",
+      "b": "Monitor CRT",
+      "c": "Speaker Bluetooth",
+      "d": "LCD Monochrome"
+    },
+    "answer": "c",
+    "explanation": "Speaker Bluetooth adalah perangkat output modern."
+  },
+  {
+    "id": 4,
+    "question": "Perhatikan gambar berikut. Alat ini termasuk jenis perangkat apa?",
+    "image": "img/keyboard.jpg",
+    "options": {
+      "a": "Input",
+      "b": "Output",
+      "c": "Processing",
+      "d": "Storage"
+    },
+    "answer": "a",
+    "explanation": "Keyboard adalah perangkat input yang digunakan untuk memasukkan data ke komputer."
+  },
+  {
+    "id": 5,
+    "question": "Apa yang dimaksud dengan persepsi visual **monokuler** dalam konteks IMK?",
+    "options": {
+      "a": "Persepsi menggunakan dua mata secara bersamaan",
+      "b": "Persepsi menggunakan satu mata",
+      "c": "Penglihatan mata kiri saja",
+      "d": "Hanya melihat warna tanpa bentuk"
+    },
+    "answer": "b",
+    "explanation": "Monokuler berarti persepsi dengan satu mata, seperti kedalaman berdasarkan bayangan atau ukuran relatif."
+  },
+  {
+    "id": 6,
+    "question": "Gambar ini menunjukkan perangkat apa?",
+    "image": "img/monitor.jpeg",
+    "options": {
+      "a": "Input – CRT",
+      "b": "Output – CRT Monitor",
+      "c": "Processing Unit",
+      "d": "Scanner"
+    },
+    "answer": "b",
+    "explanation": "Monitor CRT adalah perangkat output zaman dulu."
+  },
+  {
+    "id": 7,
+    "question": "Karakteristik utama IMK adalah sebagai berikut, kecuali:",
+    "options": {
+      "a": "Human-centered",
+      "b": "System efficiency",
+      "c": "Penggunaan resource minimal",
+      "d": "User satisfaction"
+    },
+    "answer": "c",
+    "explanation": "Fokus IMK bukan pada minimalisasi resource, tapi pada efisiensi dan kenyamanan pengguna."
+  },
+  {
+    "id": 8,
+    "question": "Perangkat berikut adalah input terbaru, kecuali:",
+    "options": {
+      "a": "Touchscreen",
+      "b": "Gesture Recognition",
+      "c": "Voice Recognition",
+      "d": "Floppy Disk"
+    },
+    "answer": "d",
+    "explanation": "Floppy disk adalah media penyimpanan lama, bukan perangkat input modern."
+  },
+  {
+    "id": 9,
+    "question": "Gambar ini termasuk dalam kategori perangkat apa?",
+    "image": "img/touch.jpeg",
+    "options": {
+      "a": "Input dan Output",
+      "b": "Storage",
+      "c": "Input saja",
+      "d": "Networking"
+    },
+    "answer": "a",
+    "explanation": "Touchscreen termasuk perangkat input dan output karena bisa disentuh dan menampilkan informasi."
+  },
+  {
+    "id": 10,
+    "question": "Apa kepanjangan dari IMK?",
+    "options": {
+      "a": "Ilmu Manusia Komputer",
+      "b": "Interaksi Manusia Komputer",
+      "c": "Interface Mesin Komputer",
+      "d": "Instruksi Manual Komputer"
+    },
+    "answer": "b",
+    "explanation": "IMK adalah singkatan dari Interaksi Manusia dan Komputer."
+  },
+  {
+    "id": 11,
+    "question": "Teknik input terbaru yang memungkinkan komunikasi tanpa menyentuh layar adalah...",
+    "options": {
+      "a": "Keyboard Virtual",
+      "b": "Mouse Laser",
+      "c": "Gesture Recognition",
+      "d": "Monitor OLED"
+    },
+    "answer": "c",
+    "explanation": "Gesture recognition memungkinkan kontrol komputer tanpa kontak langsung."
+  },
+  {
+    "id": 12,
+    "question": "Gambar berikut ini termasuk perangkat output. Apa namanya?",
+    "image": "img/projector.jpeg",
+    "options": {
+      "a": "Input",
+      "b": "Storage",
+      "c": "Output - Proyektor",
+      "d": "Pengolah data"
+    },
+    "answer": "c",
+    "explanation": "Proyektor adalah perangkat output visual."
+  },
+  {
+    "id": 13,
+    "question": "Contoh persepsi visual **binokuler** adalah...",
+    "options": {
+      "a": "Melihat dua warna bersamaan",
+      "b": "Menggunakan satu mata untuk fokus",
+      "c": "Menilai kedalaman dengan dua mata",
+      "d": "Melihat bentuk melalui satu sudut"
+    },
+    "answer": "c",
+    "explanation": "Binokuler berarti persepsi dengan dua mata untuk kedalaman atau 3D."
+  },
+  {
+    "id": 14,
+    "question": "Gambar ini termasuk perangkat apa?",
+    "image": "img/scan.jpg",
+    "options": {
+      "a": "Input - Scanner",
+      "b": "Output - Kamera",
+      "c": "Processing - GPU",
+      "d": "Storage"
+    },
+    "answer": "a",
+    "explanation": "Scanner adalah perangkat input untuk memindai dokumen atau gambar."
+  },
+  {
+    "id": 15,
+    "question": "Dalam IMK, pentingnya usability adalah agar...",
+    "options": {
+      "a": "Sistem mudah digunakan dan dipelajari",
+      "b": "Aplikasi lebih murah dibuat",
+      "c": "Komputer bisa digunakan tanpa listrik",
+      "d": "Desain UI menjadi lebih mewah"
+    },
+    "answer": "a",
+    "explanation": "Usability bertujuan membuat sistem mudah digunakan dan dipelajari."
+  },
+  {
+    "id": 16,
+    "question": "Manakah perangkat input **modern** berikut ini?",
+    "options": {
+      "a": "Kertas Formulir",
+      "b": "Touchpad",
+      "c": "Monitor CRT",
+      "d": "Disket"
+    },
+    "answer": "b",
+    "explanation": "Touchpad adalah perangkat input modern, biasanya ada di laptop."
+  },
+  {
+    "id": 17,
+    "question": "Dalam konteks IMK, evaluasi usability dilakukan untuk...",
+    "options": {
+      "a": "Menguji kecepatan sistem",
+      "b": "Menguji memori komputer",
+      "c": "Menguji kenyamanan dan efisiensi antarmuka",
+      "d": "Menguji kecepatan jaringan"
+    },
+    "answer": "c",
+    "explanation": "Usability evaluation fokus pada pengalaman pengguna terhadap sistem."
+  },
+  {
+    "id": 18,
+    "question": "Gambar berikut termasuk jenis perangkat?",
+    "image": "img/earphone.jpg",
+    "options": {
+      "a": "Output Audio",
+      "b": "Input Suara",
+      "c": "Storage Suara",
+      "d": "Kamera Sensor"
+    },
+    "answer": "a",
+    "explanation": "Earphone termasuk Output Audio."
+  },
+  {
+    "id": 19,
+    "question": "Apa nama teknik komunikasi IMK menggunakan suara?",
+    "options": {
+      "a": "Audio Printing",
+      "b": "Voice Interaction",
+      "c": "Speechless UI",
+      "d": "Echo UI"
+    },
+    "answer": "b",
+    "explanation": "Voice interaction memungkinkan pengguna mengontrol sistem dengan suara."
+  },
+  {
+    "id": 20,
+    "question": "Gambar ini merupakan perangkat apa?",
+    "image": "img/vr.jpeg",
+    "options": {
+      "a": "Output – VR Display",
+      "b": "Input – Scanner",
+      "c": "Storage – Headset",
+      "d": "Networking – Router"
+    },
+    "answer": "a",
+    "explanation": "VR headset adalah perangkat output visual immersive."
+  }
+]

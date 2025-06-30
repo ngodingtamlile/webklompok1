@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Interaktif</title>
+
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f0f4ff;
+        padding-top: 80px;
+      }
+      .navbar {
+        background-color: #002b80;
+      }
+      .avatar-img {
+        width: 36px;
+        height: 36px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+      .btn-answer {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top px-4 shadow">
+      <a class="navbar-brand text-white" href="#"><i class="bi bi-mortarboard"></i> Kuis TI</a>
+      <div class="ms-auto dropdown">
+        <button class="btn btn-outline-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img id="avatarThumb" src="img/default.png" class="avatar-img me-2" alt="Avatar" />
+          <span id="userNameDisplay">Mahasiswa</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li class="px-3 py-2 text-center">
+            <img id="avatarThumbDropdown" src="img/default.png" class="rounded-circle mb-2" width="60" height="60" />
+            <div><strong id="userNameDropdown">Mahasiswa</strong></div>
+            <div>
+              <span class="badge bg-info text-dark mt-1">Skor: <span id="userScore">0</span></span>
+            </div>
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li>
+            <a class="dropdown-item text-success fw-semibold" href="#" onclick="location.reload()"> <i class="bi bi-arrow-clockwise"></i> Mulai Lagi </a>
+          </li>
+          <li>
+            <a class="dropdown-item text-primary fw-semibold" href="dashboard.html"> <i class="bi bi-house"></i> Kembali ke Dashboard </a>
+          </li>
+          <li>
+            <a class="dropdown-item text-danger fw-semibold" href="#" onclick="logout()"> <i class="bi bi-box-arrow-right"></i> Keluar </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Quiz Container -->
+    <div class="container" id="quizContainer">
+      <div class="card shadow">
+        <div class="card-body">
+          <div class="d-flex justify-content-between mb-3">
+            <h5 id="questionNumber" class="mb-2 text-primary"></h5>
+            <div id="timer" class="fw-semibold"><i class="bi bi-clock"></i> <span id="timerText">15</span> detik</div>
+            <div id="score" class="fw-semibold">Skor: 0</div>
+          </div>
+
+          <div id="questionText" class="mb-3 fw-bold">Soal akan muncul di sini...</div>
+          <div id="answerOptions"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feedback Box -->
+    <div class="container my-4" id="feedbackBox" style="display: none">
+      <div class="alert alert-info">
+        <div id="feedbackMessage" class="fw-bold">Jawaban Anda...</div>
+        <div id="explanationText">Penjelasan akan muncul di sini.</div>
+      </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div class="container" id="resultScreen" style="display: none">
+      <div class="card text-center shadow">
+        <div class="card-body">
+          <h3 class="card-title">🎉 Kuis Selesai</h3>
+          <p id="finalScore">Skor akhir Anda: 0</p>
+          <a href="dashboard.html" class="btn btn-primary"><i class="bi bi-house"></i> Kembali ke Dashboard</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const name = localStorage.getItem("userName") || "Mahasiswa";
+        const avatar = localStorage.getItem("userAvatar") || "img/default.png";
+        const score = localStorage.getItem("userScore") || 0;
+
+        document.getElementById("userNameDisplay").textContent = name;
+        document.getElementById("userNameDropdown").textContent = name;
+        document.getElementById("userScore").textContent = score;
+        document.getElementById("avatarThumb").src = avatar;
+        document.getElementById("avatarThumbDropdown").src = avatar;
+      });
+    </script>
+    <script type="module">
+      import { logout } from "./js/logout.js";
+      window.logout = logout;
+    </script>
+
+    <script type="module" src="js/quiz.js"></script>
+  </body>
+</html>
